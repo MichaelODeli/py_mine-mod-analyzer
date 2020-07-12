@@ -57,3 +57,4 @@ while e==1:
 
     else:
         print("Unknown command. Try again or type 'info'.")
+input()
