@@ -15,3 +15,21 @@ Application for Minecraft`s mods for analyzing them, find errors and duplicates 
 `mine setdirectrory mod` - Set mods library on your PC. Default value: application root directory
 
 `mine setdirectrory backup` - Set mods backup directory. Default value: application root directory
+ 
+`mod install [modname]` - 
+  
+`mod name [modname]` - 
+  
+`mod remove [modname]` - 
+  
+`mod [disable/enable] [modname]` - 
+
+`mod info [modname]` - 
+  
+`mod backup [modname]` - 
+  
+`mod check [modname]` - 
+  
+`mod list (category)` - 
+
+`mod setcategory [category] [modname]` - 
