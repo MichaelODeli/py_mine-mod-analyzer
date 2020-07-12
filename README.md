@@ -6,6 +6,8 @@ Application for Minecraft`s mods for analyzing them, find errors and duplicates 
 - Minecraft mods checker
 - Minecraft mods rename (using mcmod.info file)
 # Commands
+`help` - Help link to this GitHub Page.
+
 `mine install [forge/codechickenlib]` - install required libraries
 
 `mine launch` - Launch the game
