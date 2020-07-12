@@ -11,7 +11,7 @@ while e==1:
     console_input=[ ]
     console_input = list(map(str,input('>>> ').split()))
     if console_input[0]=="help":
-        print("In develop.")
+        print("You can view additional information on github. https://github.com/MichaelODeli/py_mine-mod-analyzer")
 
     elif console_input[0]=="q" or console_input[0]=="exit":
         break
