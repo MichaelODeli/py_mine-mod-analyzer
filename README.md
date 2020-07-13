@@ -24,7 +24,7 @@ Application for Minecraft`s mods for analyzing them, find errors and duplicates 
   
 :no_entry_sign:`mod remove [modname]` - Remove mod with `[modname]`
   
-:no_entry_sign:`mod [disable/enable] [modname]` - Disable/Enable mod 
+:white_check_mark:`mod [disable/enable]` - Disable/Enable mod 
 
 :no_entry_sign:`mod info [modname]` - Information about mod
   
