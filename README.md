@@ -32,6 +32,6 @@ Application for Minecraft`s mods for analyzing them, find errors and duplicates 
   
 `mod check [modname]` - Check all mods (without attribute), or only one
   
-:white_check_mark: `mod list (category)` - This command allows you to display a list of installed modifications, as well as enabled and disabled
+:white_check_mark: `mod list [disable/enable/(empty)]` - This command allows you to display a list of installed modifications, as well as enabled and disabled
 
 `mod setcategory [category] [modname]` - Set mod category
