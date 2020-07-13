@@ -40,9 +40,9 @@ while e==1:
         elif console_input[1]=="remove":
             print("Feature in development.")
         elif console_input[1]=="disable":
-            print("Feature in development.")
+            modfunc.dismod()
         elif console_input[1]=="enable":
-            print("Feature in development.")
+            modfunc.enamod()
         elif console_input[1]=="info":
             print("Feature in development.")
         elif console_input[1]=="backup":
