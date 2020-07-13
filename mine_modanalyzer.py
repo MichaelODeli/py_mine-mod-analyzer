@@ -6,8 +6,13 @@ from mine_modanalyzer_res import modfunc
 os.system("cls")
 # base.launcher()
 base.welcome()
-e = 1
-
+try: 
+    apdir=os.getenv('APPDATA')
+    modlocation = apdir+r"/.minecraft/mods"
+    e=1
+except:
+    print("There is no folder with Minecraft and (or) a folder with mods. The application may not work correctly.")
+    print("If you have a folder with the game in a different directory (default: AppData-. Minecraft-mods), then install it in the settings file (in development)")
 while e==1:
     console_input=[ ]
     console_input = list(map(str,input(' >>>  ').split()))
