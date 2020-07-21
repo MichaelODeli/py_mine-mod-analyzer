@@ -1,18 +1,12 @@
 import os
-from mine_modanalyzer_res import base
-from mine_modanalyzer_res import minefunc
-from mine_modanalyzer_res import modfunc
-os.system("cls")
+from mine_modanalyzer_res import base #some base func
+from mine_modanalyzer_res import minefunc #minecraft func (directory, and other)
+from mine_modanalyzer_res import modfunc #mod functions
+os.system("cls") #clear console output
 # base.launcher()
-base.welcome()
+base.header()
 
-# try: 
-#     apdir=os.getenv('APPDATA')
-#     modlocation = apdir+r"/.minecraft/mods"
-#     e=1
-# except:
-#     print("There is no folder with Minecraft and (or) a folder with mods. The application may not work correctly.")
-#     print("If you have a folder with the game in a different directory (default: AppData-. Minecraft-mods), then install it in the settings file (in development)")
+# тут в скором времени будет проверка файла с настройками, с помощью модуля ---
 e=1
 while e==1: 
     try: 
@@ -26,10 +20,14 @@ while e==1:
 
     if console_input[0]=="help" or console_input[0]=="info":
         print("Please, read README.md from this github link. There will no any help commands.")
-        print("Я не хочу нагружать программу лишними командами")
+        # print("Я не хочу нагружать программу лишними командами") - translate it
     
     elif console_input[0]=="q" or console_input[0]=="exit":
         break
+
+    elif console_input[0]=='clear':
+        os.system("cls")
+        base.header()
 
     elif console_input[0]=="mine":
         try:
@@ -52,8 +50,10 @@ while e==1:
 
     elif console_input[0]=="mod":
         try:
-            if console_input[1]=="name":
-                modfunc.renamer()
+            if console_input[1]=="nameid":
+                modfunc.renamerid()
+            elif console_input[1]=="namever":
+                modfunc.renamerver()
             elif console_input[1]=="install":
                 modfunc.modinstall()
             elif console_input[1]=="remove" or console_input[1]=="delete":
@@ -79,11 +79,11 @@ while e==1:
                 except:
                     modfunc.listmodall()
         except IndexError:
-            print("Error. Try again.")
+            print("Error. Not enough arguments. Watch our help page and enter the correct command.")
     
     elif console_input[0]=="getmcmod":
         modfunc.mcmodanalyze()
-
+    
     else:
-        print("Unknown command. Try again or type 'info'.")
+        print("Unknown command.  Watch our help page and enter the correct command.")
 input("Press Enter key to shutdown. ")

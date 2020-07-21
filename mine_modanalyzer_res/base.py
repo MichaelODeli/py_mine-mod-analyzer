@@ -20,6 +20,6 @@ def launcher():
         os.system("cls")
     print("Program is loaded")
 
-def welcome():
+def header():
     print("Minecraft Mod Analyzer "+ver)
     print("To get help, print here 'help'.")
