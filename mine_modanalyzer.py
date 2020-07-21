@@ -88,6 +88,10 @@ while e==1:
         except IndexError:
             print("Error. Not enough arguments. Watch our help page and enter the correct command.")
     
+    
+    # dev feature
+    elif console_input[0]=="modloc":
+        modfunc.modloc()
     else:
         print("Unknown command.  Watch our help page and enter the correct command.")
 input("Press Enter key to shutdown. ")

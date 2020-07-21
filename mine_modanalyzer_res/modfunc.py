@@ -2,7 +2,11 @@ import os
 import fnmatch
 import zipfile
 import configparser
-
+import shutil
+config=configparser.ConfigParser(comment_prefixes=';', inline_comment_prefixes=';') # set new variable
+config.read("settings.ini") # reading settings file
+mod_loc=config.get('location', 'mod_location') # set mod location as mod_loc
+back_loc=config.get("location", "backup_location") # set backup location as back_loc
 # released
 def listmodall():
     print("All mods:")
@@ -182,17 +186,21 @@ def renamerid():
 def checkmod():
     print("Use 'mod info'. In beta-release it command will be removed")
 
-# developing now
+# unavaliable feature
 def backmod():
-    print("DEV-feature. ")
+    print("This feature is not avaliable, because i did not find any copying files module.")
 def modinstall():
-    print("Installer from local folder")
-    
+    print("Installer from local folder.")
+    print("This feature is not avaliable, because i did not find any copying files module.")
+
+# dev functions
+def modloc():
+    print(mod_loc)
 
 # future functions
 def updmod():
     print("Feature in development.")
-    print("Will be released later, but i must buy webserver and learn CurseForge API")
+    print("Will be released later, because i must buy webserver and learn CurseForge API")
 
 # not working
 def renamerver():
