@@ -21,5 +21,6 @@ def launcher():
     print("Program is loaded")
 
 def header():
-    print("Minecraft Mod Analyzer "+ver)
-    print("To get help, print here 'help'.")
+    print("Minecraft Mod Analyzer "+ver+". To get help, enter here 'help'.")
+    print("Settings and locations you can set in 'settings.ini' file")
+    print("----------------------------------------------")

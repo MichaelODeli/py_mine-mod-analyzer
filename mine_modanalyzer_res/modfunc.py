@@ -127,8 +127,6 @@ def infomod():
             n+=1
     except KeyError:
         print("No mcmod.info in mod file. Break")
-
-# developing now
 def renamerid():
     listOfFiles = os.listdir()  
     pattern = "*.jar"
@@ -181,17 +179,20 @@ def renamerid():
                 print("No modname speciefed in mcmod.info file for "+modname+". Renamer will break")
         except KeyError: 
             print("No mcmod.info in "+modname+". If you`re developer, please make this file")
-
-
-# feature functions
 def checkmod():
-    print("Feature in development.")
+    print("Use 'mod info'. In beta-release it command will be removed")
+
+# developing now
+def backmod():
+    print("DEV-feature. ")
+def modinstall():
+    print("Installer from local folder")
+    
+
+# future functions
 def updmod():
     print("Feature in development.")
-def modinstall():
-    print("Feature in development.")
-def backmod():
-    print("Feature in development.")
+    print("Will be released later, but i must buy webserver and learn CurseForge API")
 
 # not working
 def renamerver():
@@ -203,7 +204,6 @@ def renamerver():
 #         if fnmatch.fnmatch(entry, pattern):
 #             modlisting.append(entry)
 #     print(modlisting)
-
 #     for modname in modlisting:
 #         try: 
 #             modjar=zipfile.ZipFile(modname, "r")

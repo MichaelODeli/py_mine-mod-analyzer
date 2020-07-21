@@ -2,16 +2,23 @@ import os
 from mine_modanalyzer_res import base #some base func
 from mine_modanalyzer_res import minefunc #minecraft func (directory, and other)
 from mine_modanalyzer_res import modfunc #mod functions
-os.system("cls") #clear console output
-# base.launcher()
+import configparser
+os.system("cls") # clear console output
 base.header()
 
-# тут в скором времени будет проверка файла с настройками, с помощью модуля ---
+# config reader
+set_name='settings.ini' # settings name file
+config=configparser.ConfigParser(comment_prefixes=';', inline_comment_prefixes=';') # set new variable
+config.read("settings.ini")
+username=config.get('main', 'user_name')
+# mod_loc=config.get('location', 'mod_location') # set mod location as mod_loc
+# back_loc=config.get("location", "backup_location") # set backup location as back_loc
+
 e=1
 while e==1: 
     try: 
         console_input=[ ]
-        console_input = list(map(str,input(' >>>  ').split()))
+        console_input = list(map(str,input(username+'@ModAnalyzer: ').split()))
     except KeyboardInterrupt:
         break
 
@@ -40,9 +47,9 @@ while e==1:
             elif console_input[1]=="setdir":
                 try:
                     if console_input[2]=="b":
-                        minefunc.setdirback()
+                        minefunc.setdirback(set_name)
                     elif console_input[2]=="m":
-                        minefunc.setdirmod()
+                        minefunc.setdirmod(set_name)
                 except IndexError:
                     print("Not enough arguments.")
         except IndexError:
@@ -76,13 +83,10 @@ while e==1:
                         modfunc.listmoddis()
                     elif console_input[2]=="enable":
                         modfunc.listmodena()
-                except:
+                except IndexError:
                     modfunc.listmodall()
         except IndexError:
             print("Error. Not enough arguments. Watch our help page and enter the correct command.")
-    
-    elif console_input[0]=="getmcmod":
-        modfunc.mcmodanalyze()
     
     else:
         print("Unknown command.  Watch our help page and enter the correct command.")
