@@ -34,31 +34,28 @@ while e==1:
     elif console_input[0]=="mine":
         try:
             if console_input[1]=="install":
-                print("Feature in development.")
+                minefunc.mineinstall()
             elif console_input[1]=="setcategory":
-                print("Feature in development.")
+                minefunc.minesetcategory()
             elif console_input[1]=="launch":
-                print("Feature in development.")
-            elif console_input[1]=="setdirectory":
+                minefunc.minelaunch()
+            elif console_input[1]=="setdir":
                 try:
-                    if console_input[2]=="game":
-                        print("Feature in development.")
-                    elif console_input[2]=="mod":
-                        print("Feature in development.")
-                    elif console_input[2]=="backup":
-                        print("Feature in development.")
+                    if console_input[2]=="b":
+                        minefunc.setdirback()
+                    elif console_input[2]=="m":
+                        minefunc.setdirmod()
                 except IndexError:
                     print("Not enough arguments.")
         except IndexError:
             print("Not enough arguments.")
 
-
     elif console_input[0]=="mod":
         try:
             if console_input[1]=="name":
-                print("Feature in development.")
+                modfunc.renamer()
             elif console_input[1]=="install":
-                print("Feature in development.")
+                modfunc.modinstall()
             elif console_input[1]=="remove" or console_input[1]=="delete":
                 modfunc.remmod()
             elif console_input[1]=="disable":
@@ -66,13 +63,13 @@ while e==1:
             elif console_input[1]=="enable":
                 modfunc.enamod()
             elif console_input[1]=="info":
-                print("Feature in development.")
+                modfunc.infomod()
             elif console_input[1]=="backup":
                 modfunc.backmod()
             elif console_input[1]=="check":
-                print("Feature in development.")
+                modfunc.checkmod()   
             elif console_input[1]=="update":
-                print("Feature in development.")
+                modfunc.updmod()
             elif console_input[1]=="list":
                 try:
                     if console_input[2]=="disable":
@@ -82,14 +79,11 @@ while e==1:
                 except:
                     modfunc.listmodall()
         except IndexError:
-            print("Not enough arguments.")
-    
-    elif console_input[0]=="anmcmod":
-        modfunc.anmcmod()
+            print("Error. Try again.")
     
     elif console_input[0]=="getmcmod":
-        modfunc.modextract()
+        modfunc.mcmodanalyze()
 
     else:
         print("Unknown command. Try again or type 'info'.")
-input("Press any key to shutdown. ")
+input("Press Enter key to shutdown. ")
